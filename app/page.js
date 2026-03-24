@@ -40,16 +40,16 @@ const stats = [
   { value: 5, suffix: '+', label: 'Years Experience' },
   { value: 30, suffix: '+', label: 'Projects Delivered' },
   { value: 40, suffix: '%', label: 'Average Savings' },
-  { value: 6, suffix: '', label: 'Core Services' },
+  { value: 5, suffix: '', label: 'Core Services' },
 ]
 
 const services = [
   {
-    title: 'CNC Machining',
-    description: '3, 4, and 5-axis precision machining with tolerances down to ±0.001"',
-    href: '/services/cnc-machining',
-    icon: '⚙️',
-    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&q=80',
+    title: 'Sourcing & Procurement',
+    description: 'Global supplier network including CNC machining, quality inspection and engineering support',
+    href: '/services/sourcing',
+    icon: '🌐',
+    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80',
   },
   {
     title: 'CAD Design',
@@ -59,13 +59,6 @@ const services = [
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
   },
   {
-    title: 'Sourcing & Procurement',
-    description: 'Global supplier network for materials and components at competitive rates',
-    href: '/services/sourcing',
-    icon: '🌐',
-    image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80',
-  },
-  {
     title: 'Placement Services',
     description: 'Dedicated offshore engineers and designers working exclusively for you',
     href: '/services/placement',
@@ -73,18 +66,18 @@ const services = [
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80',
   },
   {
-    title: 'Quality Inspection',
-    description: 'ISO 9001 compliant QC with full documentation and CMM measurement',
-    href: '/services/quality-inspection',
-    icon: '✓',
-    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80',
+    title: 'AI Services',
+    description: 'AI-powered automation, analytics, and custom assistants for your operations',
+    href: '/services/ai-services',
+    icon: '🤖',
+    image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80',
   },
   {
-    title: 'Engineering Support',
-    description: 'Technical consultation, process optimization, and prototype development',
-    href: '/services/engineering',
-    icon: '🔧',
-    image: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=600&q=80',
+    title: 'Business Process Services',
+    description: 'Back-office operations, trade compliance, procurement admin and reporting',
+    href: '/services/business-process',
+    icon: '📋',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80',
   },
 ]
 

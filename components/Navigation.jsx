@@ -5,12 +5,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const services = [
-  { name: 'CNC Machining', href: '/services/cnc-machining' },
-  { name: 'CAD Design Services', href: '/services/cad-design' },
   { name: 'Sourcing & Procurement', href: '/services/sourcing' },
+  { name: 'CAD Design Services', href: '/services/cad-design' },
   { name: 'Placement Services', href: '/services/placement' },
-  { name: 'Quality Inspection', href: '/services/quality-inspection' },
-  { name: 'Engineering Support', href: '/services/engineering' },
+  { name: 'AI Services', href: '/services/ai-services' },
+  { name: 'Business Process Services', href: '/services/business-process' },
 ]
 
 export default function Navigation() {
@@ -40,7 +39,6 @@ export default function Navigation() {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <Link href="/" className="flex flex-col">
             <span className="text-2xl font-display font-bold">
               <span className="text-amber-500">MAPLE</span>
@@ -49,7 +47,6 @@ export default function Navigation() {
             <span className="text-xs text-white/50 tracking-wider">Machinery Parts Sourcing Services</span>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             <Link href="/" className={`text-sm font-medium transition-colors ${
               isActive('/') ? 'text-amber-500' : 'text-white/80 hover:text-amber-500'
@@ -57,8 +54,8 @@ export default function Navigation() {
               Home
             </Link>
             
-            {/* Services Dropdown */}
-            <div className="relative"
+            <div
+              className="relative"
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
@@ -72,20 +69,22 @@ export default function Navigation() {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-maple-charcoal border border-white/10 rounded-xl shadow-xl overflow-hidden">
-                  {services.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      className={`block px-4 py-3 text-sm transition-colors ${
-                        isActive(service.href) 
-                          ? 'bg-amber-500/10 text-amber-500' 
-                          : 'text-white/80 hover:bg-white/5 hover:text-amber-500'
-                      }`}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-2 w-64">
+                  <div className="bg-maple-charcoal border border-white/10 rounded-xl shadow-xl overflow-hidden">
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className={`block px-4 py-3 text-sm transition-colors ${
+                          isActive(service.href)
+                            ? 'bg-amber-500/10 text-amber-500'
+                            : 'text-white/80 hover:bg-white/5 hover:text-amber-500'
+                        }`}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -113,7 +112,6 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-2 text-white/80 hover:text-amber-500 transition-colors"
@@ -132,7 +130,6 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-maple-charcoal border-t border-white/10">
           <div className="px-4 py-4 space-y-2">

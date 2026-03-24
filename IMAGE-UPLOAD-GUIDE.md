@@ -51,7 +51,7 @@ public/
 | `public/images/services/cad-design.jpg` | CAD Design page — hero image |
 | `public/images/services/sourcing.jpg` | Sourcing & Procurement page — hero image |
 | `public/images/services/placement.jpg` | Placement Services page — hero image |
-| `public/images/services/quality-inspection.jpg` | Quality Inspection page — hero image |
+| `public/images/services/quality-inspection.png` | Quality Inspection page — hero image |
 | `public/images/services/engineering.jpg` | Engineering Support page — hero image |
 | `public/images/case-studies/packaging-equipment.jpg` | Case Studies page — first case study |
 | `public/images/case-studies/industrial-automation.jpg` | Case Studies page — second case study |
@@ -68,3 +68,10 @@ public/
 - Recommended format: JPG for photos, PNG for logos
 - Recommended size: 1200x900px for hero images, 500x500px for gallery/logos
 - After uploading, Vercel redeploys automatically in ~1 minute
+
+## New pages added
+
+| Upload this file | Shows up here |
+|---|---|
+| `public/images/services/ai-services.jpg` | AI Services page — hero image |
+| `public/images/services/business-process.jpg` | Business Process Services page — hero image |

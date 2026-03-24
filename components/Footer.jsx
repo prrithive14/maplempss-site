@@ -1,12 +1,11 @@
 import Link from 'next/link'
 
 const services = [
-  { name: 'CNC Machining', href: '/services/cnc-machining' },
-  { name: 'CAD Design', href: '/services/cad-design' },
   { name: 'Sourcing & Procurement', href: '/services/sourcing' },
+  { name: 'CAD Design', href: '/services/cad-design' },
   { name: 'Placement Services', href: '/services/placement' },
-  { name: 'Quality Inspection', href: '/services/quality-inspection' },
-  { name: 'Engineering Support', href: '/services/engineering' },
+  { name: 'AI Services', href: '/services/ai-services' },
+  { name: 'Business Process Services', href: '/services/business-process' },
 ]
 
 const quickLinks = [

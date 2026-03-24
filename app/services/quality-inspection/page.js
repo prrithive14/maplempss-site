@@ -72,7 +72,7 @@ export default function QualityInspectionPage() {
             {/* IMAGE SLOT: upload public/images/services/quality-inspection.jpg to change this */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
               <Image
-                src="/images/services/quality-inspection.jpg"
+                src="/images/services/quality-inspection.png"
                 alt="Quality Inspection"
                 fill
                 className="object-cover"
