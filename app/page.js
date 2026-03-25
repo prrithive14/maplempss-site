@@ -50,6 +50,7 @@ const services = [
     description: 'Global supplier network including CNC machining, quality inspection and engineering support',
     href: '/services/sourcing',
     icon: '🌐',
+    local: '/images/services/sourcing.jpg',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80',
   },
   {
@@ -57,6 +58,7 @@ const services = [
     description: '2D/3D modeling, DFM reviews, and reverse engineering services',
     href: '/services/cad-design',
     icon: '📐',
+    local: '/images/services/cad-design.jpg',
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80',
   },
   {
@@ -64,6 +66,7 @@ const services = [
     description: 'Dedicated offshore engineers and designers working exclusively for you',
     href: '/services/placement',
     icon: '👥',
+    local: '/images/services/placement.jpg',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80',
   },
   {
@@ -71,6 +74,7 @@ const services = [
     description: 'AI-powered automation, analytics, and custom assistants for your operations',
     href: '/services/ai-services',
     icon: '🤖',
+    local: '/images/services/ai-services.jpg',
     image: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=600&q=80',
   },
   {
@@ -78,6 +82,7 @@ const services = [
     description: 'Back-office operations, trade compliance, procurement admin and reporting',
     href: '/services/business-process',
     icon: '📋',
+    local: '/images/services/business-process.jpg',
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80',
   },
 ]
@@ -288,10 +293,10 @@ export default function Home() {
                   className="block bg-maple-charcoal border border-white/10 rounded-xl card-hover group overflow-hidden"
                 >
                   <div className="relative h-40 w-full overflow-hidden">
-                    <Image
-                      src={service.image}
+                    <ServiceImage
+                      localSrc={service.local}
+                      fallbackSrc={service.image}
                       alt={service.title}
-                      fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-maple-charcoal via-black/20 to-transparent" />

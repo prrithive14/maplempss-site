@@ -36,10 +36,10 @@ const tolerances = [
 ]
 
 const galleryImages = [
-  { src: '/images/services/cnc-gallery-1.jpg', alt: 'Precision machined part' },
-  { src: '/images/services/cnc-gallery-2.jpg', alt: 'CNC milling operation' },
-  { src: '/images/services/cnc-gallery-3.jpg', alt: 'Metal fabrication' },
-  { src: '/images/services/cnc-gallery-4.jpg', alt: 'Industrial components' },
+  { local: '/images/services/cnc-gallery-1.jpg', fallback: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80', alt: 'Precision machined part' },
+  { local: '/images/services/cnc-gallery-2.jpg', fallback: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=500&q=80', alt: 'CNC milling operation' },
+  { local: '/images/services/cnc-gallery-3.jpg', fallback: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?w=500&q=80', alt: 'Metal fabrication' },
+  { local: '/images/services/cnc-gallery-4.jpg', fallback: 'https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=500&q=80', alt: 'Industrial components' },
 ]
 
 const relatedServices = [
@@ -143,11 +143,11 @@ export default function CNCMachiningPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {galleryImages.map((img, i) => (
               <div key={i} className="aspect-square rounded-xl overflow-hidden relative bg-white/5">
-                <Image
-                  src={img.src}
+                <ServiceImage
+                  localSrc={img.local}
+                  fallbackSrc={img.fallback}
                   alt={img.alt}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
+                                    className="object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
             ))}
