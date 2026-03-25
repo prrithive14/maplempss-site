@@ -65,7 +65,7 @@ export default function CADDesignPage() {
             {/* IMAGE SLOT: upload public/images/services/cad-design.jpg to change this */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
               <Image
-                src="/images/services/cad-design.jpg"
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=90"
                 alt="CAD Design Services"
                 fill
                 className="object-cover"

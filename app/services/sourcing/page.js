@@ -40,7 +40,7 @@ const subsections = [
     description: '3, 4, and 5-axis precision machining with tolerances down to ±0.001". From prototypes to full production runs, our India facility delivers parts to your exact specifications.',
     icon: '⚙️',
     href: '/services/cnc-machining',
-    image: '/images/services/cnc-machining.jpg',
+    image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=900&q=85',
     highlights: ['3, 4 & 5-axis milling', 'CNC turning & lathe', 'Surface & cylindrical grinding', 'Wire EDM'],
   },
   {
@@ -56,16 +56,16 @@ const subsections = [
     description: 'Access experienced engineers who can help optimize your designs, improve manufacturability, and reduce costs without compromising quality.',
     icon: '🔧',
     href: '/services/engineering',
-    image: '/images/services/engineering.jpg',
+    image: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=900&q=85',
     highlights: ['Design for Manufacturability (DFM)', 'Process optimization', 'Prototype development', 'Value engineering'],
   },
 ]
 
 const galleryImages = [
-  { src: '/images/services/cnc-gallery-1.jpg', alt: 'Precision machined part' },
-  { src: '/images/services/cnc-gallery-2.jpg', alt: 'CNC milling operation' },
-  { src: '/images/services/cnc-gallery-3.jpg', alt: 'Metal fabrication' },
-  { src: '/images/services/cnc-gallery-4.jpg', alt: 'Industrial components' },
+  { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80', alt: 'Precision machined part' },
+  { src: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=500&q=80', alt: 'CNC milling operation' },
+  { src: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?w=500&q=80', alt: 'Metal fabrication' },
+  { src: 'https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=500&q=80', alt: 'Industrial components' },
 ]
 
 const relatedServices = [
@@ -107,7 +107,7 @@ export default function SourcingPage() {
             {/* IMAGE SLOT: upload public/images/services/sourcing.jpg */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
               <Image
-                src="/images/services/sourcing.jpg"
+                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=90"
                 alt="Sourcing & Procurement"
                 fill
                 className="object-cover"

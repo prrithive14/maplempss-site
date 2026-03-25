@@ -65,7 +65,7 @@ export default function EngineeringPage() {
             {/* IMAGE SLOT: upload public/images/services/engineering.jpg to change this */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
               <Image
-                src="/images/services/engineering.jpg"
+                src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=1200&q=90"
                 alt="Engineering Support"
                 fill
                 className="object-cover"

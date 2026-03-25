@@ -81,19 +81,14 @@ export default function BusinessProcessPage() {
             {/* IMAGE SLOT: upload public/images/services/business-process.jpg to change this */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5 border border-white/10">
               <Image
-                src="/images/services/business-process.jpg"
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=90"
                 alt="Business Process Services"
                 fill
                 className="object-cover"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <span className="text-6xl mb-4 block">📋</span>
-                  <p className="text-white/40 text-sm">Upload: /public/images/services/business-process.jpg</p>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
