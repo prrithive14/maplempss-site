@@ -41,6 +41,7 @@ const subsections = [
     description: '3, 4, and 5-axis precision machining with tolerances down to ±0.001". From prototypes to full production runs, our India facility delivers parts to your exact specifications.',
     icon: '⚙️',
     href: '/services/cnc-machining',
+    local: '/images/services/cnc-machining.jpg',
     image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=900&q=85',
     highlights: ['3, 4 & 5-axis milling', 'CNC turning & lathe', 'Surface & cylindrical grinding', 'Wire EDM'],
   },
@@ -49,7 +50,8 @@ const subsections = [
     description: 'ISO 9001 compliant QC at every stage of production. Our dedicated inspection team ensures every part meets your specifications before it ships.',
     icon: '✓',
     href: '/services/quality-inspection',
-    image: '/images/services/quality-inspection.png',
+    local: '/images/services/quality-inspection.png',
+    image: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&q=85',
     highlights: ['CMM measurement', 'First article inspection', 'In-process inspection', 'Full documentation'],
   },
   {
@@ -57,16 +59,17 @@ const subsections = [
     description: 'Access experienced engineers who can help optimize your designs, improve manufacturability, and reduce costs without compromising quality.',
     icon: '🔧',
     href: '/services/engineering',
+    local: '/images/services/engineering.jpg',
     image: 'https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?w=900&q=85',
     highlights: ['Design for Manufacturability (DFM)', 'Process optimization', 'Prototype development', 'Value engineering'],
   },
 ]
 
 const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80', alt: 'Precision machined part' },
-  { src: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=500&q=80', alt: 'CNC milling operation' },
-  { src: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?w=500&q=80', alt: 'Metal fabrication' },
-  { src: 'https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=500&q=80', alt: 'Industrial components' },
+  { local: '/images/services/cnc-gallery-1.jpg', fallback: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&q=80', alt: 'Precision machined part' },
+  { local: '/images/services/cnc-gallery-2.jpg', fallback: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=500&q=80', alt: 'CNC milling operation' },
+  { local: '/images/services/cnc-gallery-3.jpg', fallback: 'https://images.unsplash.com/photo-1567789884554-0b844b597180?w=500&q=80', alt: 'Metal fabrication' },
+  { local: '/images/services/cnc-gallery-4.jpg', fallback: 'https://images.unsplash.com/photo-1590959651373-a3db0f38a961?w=500&q=80', alt: 'Industrial components' },
 ]
 
 const relatedServices = [
@@ -178,10 +181,10 @@ export default function SourcingPage() {
               <div key={i} className={`grid lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
                 <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
                   <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
-                    <Image
-                      src={sub.image}
+                    <ServiceImage
+                      localSrc={sub.local}
+                      fallbackSrc={sub.image}
                       alt={sub.title}
-                      fill
                       className="object-cover object-top"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -224,10 +227,10 @@ export default function SourcingPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {galleryImages.map((img, i) => (
               <div key={i} className="aspect-square rounded-xl overflow-hidden relative bg-white/5">
-                <Image
-                  src={img.src}
+                <ServiceImage
+                  localSrc={img.local}
+                  fallbackSrc={img.fallback}
                   alt={img.alt}
-                  fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>

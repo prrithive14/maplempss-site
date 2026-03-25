@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ServiceImage from '@/components/ServiceImage'
 import Image from 'next/image'
 
 export const metadata = {
@@ -20,6 +21,7 @@ const caseStudies = [
     ],
     quote: 'Maple MPSS transformed our supply chain. The quality is consistent, communication is excellent, and we are saving significantly compared to domestic suppliers.',
     quoteAuthor: 'Operations Director',
+    local: '/images/case-studies/packaging-equipment.jpg',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=85',
   },
   {
@@ -35,6 +37,7 @@ const caseStudies = [
     ],
     quote: 'Having a dedicated team in India without the overhead of managing them ourselves has been a game-changer for our growth.',
     quoteAuthor: 'VP of Engineering',
+    local: '/images/case-studies/industrial-automation.jpg',
     image: 'https://images.unsplash.com/photo-1565043666747-69f6646db940?w=900&q=85',
   },
 ]
@@ -76,10 +79,10 @@ export default function CaseStudiesPage() {
                 {/* Image/Visual */}
                 <div className={`${i % 2 === 1 ? 'lg:order-2' : ''}`}>
                   <div className="aspect-[4/3] rounded-2xl overflow-hidden relative sticky top-24">
-                    <Image
-                      src={study.image}
+                    <ServiceImage
+                      localSrc={study.local}
+                      fallbackSrc={study.image}
                       alt={study.title}
-                      fill
                       className="object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
