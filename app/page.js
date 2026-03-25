@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import ServiceImage from '@/components/ServiceImage'
 import { motion, useInView } from 'framer-motion'
 
 // Animated counter component
@@ -197,11 +198,11 @@ export default function Home() {
               className="relative"
             >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
-                <Image
-                  src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=900&q=85"
+                <ServiceImage
+                  localSrc="/images/hero.jpg"
+                  fallbackSrc="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=900&q=85"
                   alt="CNC Machining at Maple MPSS"
-                  fill
-                  className="object-cover"
+                                    className="object-cover"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ServiceImage from '@/components/ServiceImage'
 
 export const metadata = {
   title: 'Sourcing & Procurement',
@@ -106,12 +107,12 @@ export default function SourcingPage() {
             </div>
             {/* IMAGE SLOT: upload public/images/services/sourcing.jpg */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
-              <Image
-                src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=90"
+              <ServiceImage
+                localSrc="/images/services/sourcing.jpg"
+                fallbackSrc="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=90"
                 alt="Sourcing & Procurement"
-                fill
                 className="object-cover"
-                priority
+                priority={true}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>

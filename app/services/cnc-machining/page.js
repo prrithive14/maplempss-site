@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ServiceImage from '@/components/ServiceImage'
 
 export const metadata = {
   title: 'CNC Machining & Metal Fabrication',
@@ -79,12 +80,12 @@ export default function CNCMachiningPage() {
             </div>
             {/* IMAGE SLOT: upload public/images/services/cnc-machining.jpg to change this */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
-              <Image
-                src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1200&q=90"
+              <ServiceImage
+                localSrc="/images/services/cnc-machining.jpg"
+                fallbackSrc="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1200&q=90"
                 alt="CNC Machining"
-                fill
                 className="object-cover"
-                priority
+                priority={true}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
