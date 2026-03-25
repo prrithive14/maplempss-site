@@ -63,7 +63,7 @@ export default function PlacementPage() {
             {/* IMAGE SLOT: upload public/images/services/placement.jpg to change this */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
               <Image
-                src="/images/services/placement.jpg"
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=90"
                 alt="Placement Services"
                 fill
                 className="object-cover"

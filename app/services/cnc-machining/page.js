@@ -80,7 +80,7 @@ export default function CNCMachiningPage() {
             {/* IMAGE SLOT: upload public/images/services/cnc-machining.jpg to change this */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
               <Image
-                src="/images/services/cnc-machining.jpg"
+                src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=1200&q=90"
                 alt="CNC Machining"
                 fill
                 className="object-cover"
