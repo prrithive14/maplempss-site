@@ -1,20 +1,17 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ServiceImage from '@/components/ServiceImage'
 
 export const metadata = {
   title: 'AI Services',
-  description: 'AI-powered solutions for manufacturing, supply chain, and business operations. Automate workflows, analyze data, and drive smarter decisions.',
+  description: 'AI-powered solutions for manufacturing, supply chain, and business operations.',
 }
 
 const services = [
-  'AI-powered demand forecasting',
-  'Automated quality inspection',
-  'Supply chain optimization',
-  'Predictive maintenance',
-  'Custom AI chatbots',
-  'Data analytics & reporting',
-  'Process automation (RPA)',
-  'Document intelligence',
+  'AI-powered demand forecasting', 'Automated quality inspection',
+  'Supply chain optimization', 'Predictive maintenance',
+  'Custom AI chatbots', 'Data analytics & reporting',
+  'Process automation (RPA)', 'Document intelligence',
 ]
 
 const useCases = [
@@ -47,51 +44,40 @@ export default function AIServicesPage() {
         </div>
       </div>
 
-      {/* Hero */}
       <section className="py-20 mesh-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block px-4 py-1.5 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 text-sm font-medium mb-6">
-                Powered by Modern AI
-              </span>
-              <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-                AI Services
-              </h1>
-              <p className="text-lg text-white/70 mb-8">
-                We bring AI-powered solutions to manufacturing and supply chain operations. From automated quality inspection to custom AI assistants — we help you work smarter, faster, and at lower cost.
-              </p>
+              <span className="inline-block px-4 py-1.5 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 text-sm font-medium mb-6">Powered by Modern AI</span>
+              <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">AI Services</h1>
+              <p className="text-lg text-white/70 mb-8">We bring AI-powered solutions to manufacturing and supply chain operations. From automated quality inspection to custom AI assistants — we help you work smarter, faster, and at lower cost.</p>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact" className="btn-primary">Get Started</Link>
                 <a href="tel:+16476714516" className="btn-secondary">Call Us</a>
               </div>
             </div>
-            {/* IMAGE SLOT: upload public/images/services/ai-services.jpg to change this */}
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5 border border-white/10">
-              <Image
-                src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=90"
+            {/* Upload /public/images/services/ai-services.jpg to use your own photo */}
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
+              <ServiceImage
+                localSrc="/images/services/ai-services.jpg"
+                fallbackSrc="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=90"
                 alt="AI Services"
-                fill
                 className="object-cover"
-                priority
+                priority={true}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
       <section className="py-20 bg-maple-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-display font-bold text-white mb-12">What We Offer</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {services.map((service, i) => (
               <div key={i} className="p-4 bg-maple-charcoal border border-white/10 rounded-lg flex items-center gap-3">
-                <svg className="w-5 h-5 text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
+                <svg className="w-5 h-5 text-amber-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 <span className="text-white/80">{service}</span>
               </div>
             ))}
@@ -99,7 +85,6 @@ export default function AIServicesPage() {
         </div>
       </section>
 
-      {/* Use Cases */}
       <section className="py-20 bg-maple-charcoal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -118,7 +103,6 @@ export default function AIServicesPage() {
         </div>
       </section>
 
-      {/* Why AI */}
       <section className="py-20 bg-maple-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -131,12 +115,7 @@ export default function AIServicesPage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: '30%', label: 'Average cost reduction' },
-                { value: '3x', label: 'Faster defect detection' },
-                { value: '80%', label: 'Less manual reporting' },
-                { value: '48hr', label: 'Typical implementation' },
-              ].map((stat, i) => (
+              {[{ value: '30%', label: 'Average cost reduction' }, { value: '3x', label: 'Faster defect detection' }, { value: '80%', label: 'Less manual reporting' }, { value: '48hr', label: 'Typical implementation' }].map((stat, i) => (
                 <div key={i} className="p-6 bg-maple-charcoal border border-white/10 rounded-xl text-center">
                   <p className="text-3xl font-display font-bold text-amber-500 mb-1">{stat.value}</p>
                   <p className="text-sm text-white/50">{stat.label}</p>
@@ -147,7 +126,6 @@ export default function AIServicesPage() {
         </div>
       </section>
 
-      {/* Related Services */}
       <section className="py-20 bg-maple-charcoal">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-display font-bold text-white mb-12">Related Services</h2>
@@ -162,7 +140,6 @@ export default function AIServicesPage() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 bg-amber-500/10 border-y border-amber-500/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-display font-bold text-white mb-4">Ready to Add AI to Your Operations?</h2>

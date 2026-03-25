@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ServiceImage from '@/components/ServiceImage'
 
 export const metadata = {
   title: 'Placement Services',
@@ -62,12 +63,12 @@ export default function PlacementPage() {
             </div>
             {/* IMAGE SLOT: upload public/images/services/placement.jpg to change this */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
-              <Image
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=90"
+              <ServiceImage
+                localSrc="/images/services/placement.jpg"
+                fallbackSrc="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&q=90"
                 alt="Placement Services"
-                fill
                 className="object-cover"
-                priority
+                priority={true}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>

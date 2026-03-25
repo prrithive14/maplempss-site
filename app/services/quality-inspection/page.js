@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ServiceImage from '@/components/ServiceImage'
 
 export const metadata = {
   title: 'Quality Inspection',
@@ -71,11 +72,11 @@ export default function QualityInspectionPage() {
             </div>
             {/* IMAGE SLOT: upload public/images/services/quality-inspection.jpg to change this */}
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative bg-white/5">
-              <Image
-                src="/images/services/quality-inspection.png"
+              <ServiceImage
+                localSrc="/images/services/quality-inspection.png"
+                fallbackSrc="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=90"
                 alt="Quality Inspection"
-                fill
-                className="object-cover"
+                                className="object-cover"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

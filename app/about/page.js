@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import ServiceImage from '@/components/ServiceImage'
 
 export const metadata = {
   title: 'About Us',
@@ -99,11 +100,11 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="aspect-[4/3] rounded-2xl overflow-hidden relative">
-              <Image
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=85"
+              <ServiceImage
+                localSrc="/images/about.jpg"
+                fallbackSrc="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=85"
                 alt="Maple MPSS team at work"
-                fill
-                className="object-cover"
+                                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
